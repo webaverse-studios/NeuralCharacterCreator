@@ -1,0 +1,4 @@
+node_modules/
+.history
+embeddings.json
+package-lock.json
