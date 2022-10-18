@@ -1,3 +1,6 @@
+// import dotenv
+import dotenv from 'dotenv';
+dotenv.config();
 import '@tensorflow/tfjs-node';
 import use from '@tensorflow-models/universal-sentence-encoder';
 import { readFileSync } from 'fs';
@@ -45,7 +48,7 @@ body:`
 async function extractDescription(name, description) {
 
     const configuration = new Configuration({
-        apiKey: "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",
+        apiKey: process.env.OPENAI_API_KEY,
     });
     const openai = new OpenAIApi(configuration);
 
