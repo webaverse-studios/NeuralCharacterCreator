@@ -11,6 +11,8 @@ import fs from "fs";
 
 var argv = minimist(process.argv.slice(2));
 
+if(!process.env.OPENAI_API_KEY)
+    console.error('Please set OPENAI_API_KEY in .env file');
 
 const makePrompt = (name, description) =>
     `
